@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="564.0" prefWidth="746.0" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+	<children>
+		<VBox alignment="CENTER" layoutY="-6.0" prefHeight="564.0" prefWidth="201.0" spacing="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<children>
+				<JFXButton fx:id="openFile_Btn" focusTraversable="false" onAction="#fonkOpenFile" prefHeight="50.0" prefWidth="180.0" styleClass="homePage" text="Open File">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="saveFile_Btn" focusTraversable="false" onAction="#fonkSaveFile" prefHeight="50.0" prefWidth="180.0" styleClass="homePage" text="Save File">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="classifaction_Btn" focusTraversable="false" onAction="#fonkClassification" prefHeight="50.0" prefWidth="180.0" styleClass="homePage" text="Classification">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXButton fx:id="clustering_Btn" focusTraversable="false" onAction="#fonkClustering" prefHeight="50.0" prefWidth="180.0" styleClass="homePage" text="Clustering">
+					<font>
+						<Font name="System Bold" size="12.0" />
+					</font>
+				</JFXButton>
+				<JFXComboBox fx:id="selectAttributes_Cmb" maxWidth="150.0" onAction="#cmbfonkMultipilChooser" promptText="Select Attributes" VBox.vgrow="ALWAYS" />
+			</children>
+		</VBox>
+		<VBox layoutX="173.0" prefHeight="525.0" prefWidth="500.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+			<children>
+				<HBox alignment="CENTER_LEFT" fillHeight="false" maxHeight="60.0" maxWidth="1.7976931348623157E308" prefHeight="60.0" spacing="10.0" style="-fx-background-color: #576574;" VBox.vgrow="ALWAYS">
+					<children>
+                  <HBox prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="40.0" text="Attributes" textFill="WHITE">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="163.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label minWidth="-Infinity" prefHeight="40.0" prefWidth="127.0" text="Current Relation" textFill="WHITE">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+					</children>
+				</HBox>
+				<VBox spacing="5.0" VBox.vgrow="ALWAYS">
+					<children>
+						<HBox prefHeight="253.0" prefWidth="527.0" VBox.vgrow="ALWAYS">
+							<children>
+								<ListView fx:id="listview" onMouseClicked="#listview_Clicked" prefHeight="250.0" prefWidth="234.0" HBox.hgrow="ALWAYS" />
+								<VBox alignment="CENTER" prefHeight="250.0" prefWidth="266.0" style="-fx-background-color: #576574;" HBox.hgrow="ALWAYS">
+									<children>
+										<HBox>
+											<children>
+												<Label maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="60.0" text="Relation:" textFill="WHITE">
+													<padding>
+														<Insets left="5.0" />
+													</padding>
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<Label fx:id="relation_Label" prefHeight="60.0">
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+													<HBox.margin>
+														<Insets left="5.0" />
+													</HBox.margin>
+												</Label>
+											</children>
+										</HBox>
+										<HBox>
+											<children>
+												<Label maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="60.0" text="Instances:" textFill="WHITE">
+													<padding>
+														<Insets left="5.0" />
+													</padding>
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<Label fx:id="instances_Label" prefHeight="60.0">
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+													<HBox.margin>
+														<Insets left="5.0" />
+													</HBox.margin>
+												</Label>
+											</children>
+										</HBox>
+										<HBox>
+											<children>
+												<Label minWidth="-Infinity" prefHeight="60.0" text="Attributes:" textFill="WHITE">
+													<padding>
+														<Insets left="5.0" />
+													</padding>
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<Label fx:id="attributes_Label" prefHeight="60.0">
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+													<HBox.margin>
+														<Insets left="5.0" />
+													</HBox.margin>
+												</Label>
+											</children>
+										</HBox>
+										<HBox>
+											<children>
+												<Label minWidth="-Infinity" prefHeight="60.0" text="Sum of Weights:" textFill="WHITE">
+													<padding>
+														<Insets left="5.0" />
+													</padding>
+													<font>
+														<Font size="14.0" />
+													</font>
+												</Label>
+												<Label fx:id="sumOfWeights_Label" prefHeight="60.0">
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+													<HBox.margin>
+														<Insets left="5.0" />
+													</HBox.margin>
+												</Label>
+											</children>
+										</HBox>
+									</children>
+								</VBox>
+							</children>
+						</HBox>
+						<VBox prefHeight="202.0" prefWidth="500.0">
+							<children>
+								<HBox prefHeight="40.0" prefWidth="500.0" style="-fx-background-color: #3385ff;" VBox.vgrow="ALWAYS">
+									<children>
+										<HBox prefHeight="40.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+											<children>
+												<Label minWidth="-Infinity" prefHeight="40.0" text="Name:" textFill="WHITE">
+													<padding>
+														<Insets left="5.0" />
+													</padding>
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+												</Label>
+												<Label fx:id="name_Label" alignment="CENTER" minWidth="-Infinity" prefHeight="40.0" textFill="WHITE" HBox.hgrow="ALWAYS">
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+												</Label>
+											</children>
+										</HBox>
+										<HBox prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+											<children>
+												<Label maxHeight="1.7976931348623157E308" minWidth="-Infinity" prefHeight="40.0" text="Type:" textFill="WHITE">
+													<padding>
+														<Insets left="5.0" />
+													</padding>
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+												</Label>
+												<Label fx:id="type_Label" alignment="CENTER" minWidth="-Infinity" prefHeight="40.0" textFill="WHITE" HBox.hgrow="ALWAYS">
+													<font>
+														<Font name="System Bold" size="14.0" />
+													</font>
+												</Label>
+											</children>
+										</HBox>
+									</children>
+								</HBox>
+								<HBox prefHeight="162.0" prefWidth="500.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+									<children>
+										<TextArea fx:id="selectedAttr_TextArea" minHeight="-Infinity" minWidth="-Infinity" prefHeight="15.0" prefWidth="527.0" HBox.hgrow="ALWAYS" />
+									</children>
+								</HBox>
+							</children>
+						</VBox>
+					</children>
+				</VBox>
+			</children>
+		</VBox>
+	</children>
+</AnchorPane>

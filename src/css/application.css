@@ -1,0 +1,92 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.startBtn{
+	-fx-background-color: #292E35;
+	-fx-background-radius: 30.0;
+	-fx-border-color: #2ecc71;
+	-fx-border-width: 2.0 2.0 2.0 5.0;
+	-fx-border-radius: 20.0;
+	-fx-border-insets: 0.0;
+}
+.startBtn:hover{
+	-fx-background-color: #292E35;
+	-fx-border-color: #40f72f;
+}
+.stopBtn{
+	-fx-background-color: #292E35;
+	-fx-background-radius: 30.0;
+	-fx-border-color: #ff3838;
+	-fx-border-width: 2.0 2.0 2.0 5.0;
+	-fx-border-radius: 20.0;
+	-fx-border-insets: 0.0;
+}
+.stopBtn:hover{
+    -fx-background-color: #292E35;
+	-fx-border-color: #D50000;
+}
+
+.homePage{
+	-fx-background-color:  #004DBB;
+	-fx-background-radius: 20.0;
+	-fx-text-fill: white;
+	-fx-border-color: blue;
+	-fx-border-radius: 20.0;
+	-fx-border-width: 2.0 2.0 2.0 5.0;
+	-fx-border-insets: 0.0;
+}
+
+.homePage:hover{
+	
+	-fx-background-color: transparent ;
+	-fx-text-fill: black;
+	-fx-border-color: #004DBB;
+
+	
+}
+
+.robotKnn{
+	-fx-background-color:  #004DBB;
+	-fx-background-radius: 20.0;
+	-fx-text-fill: white;
+	-fx-border-color: blue;
+	-fx-border-radius: 20.0;
+	-fx-border-width: 2.0 2.0 2.0 5.0;
+	-fx-border-insets: 0.0;
+}
+
+.robotKnn:hover{
+	-fx-background-color: transparent ;
+	-fx-text-fill: black;
+	-fx-border-color: #004DBB;
+
+	
+}
+
+.blackToGrey{
+	-fx-text-fill: white;
+	-fx-background-color:  #1D232A;
+}
+.blackToGrey:hover{
+	-fx-background-color: #292E35;
+}
+.blackToGrey:pressed{
+	-fx-background-color: #353D43;
+}
+.selection{
+	-fx-border-color: #0ABF35;
+	-fx-border-width: 0.0 0.0 0.0 4.0;
+
+	}
+.selection:focused{
+	-fx-background-color: #7156DD;
+	-fx-border-color: #CDD1D6;
+	-fx-border-width: 0.0px 0.0px 0.0px 3.0px;
+}
+
+.selection:hover{
+	-fx-background-color: #292E35;
+	-fx-border-color: #40f72f;
+}
+.selection:pressed{
+	-fx-background-color: #353D43;
+}
